@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="animate.css">
+	</head>
+
+	<body>
+		<div id="app">
+            <div class="wrapper wrapper1" v-bind:class="{out:state>1}">
+                <div class="page page1" >
+                    <div class="click1" v-on:click="next" >
+
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper wrapper2" v-bind:class="{waiting:state==1,out:state>2}">
+                <div class="page page2"  >
+                    <div class="click2" v-on:click="next" >
+
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper wrapper2" v-bind:class="{waiting:state<3}">
+                <div class="page page3" >
+                    <div class="blur-widget" v-touch:start="handleTouchStart" v-touch:end="handleTouchEnd" v-touch:moving="handleTouchMove">
+                        <div class="blur" v-bind:style="{ width: blurWidth + 'px' }">
+
+                        </div>
+                        <div class="handle" v-bind:style="{ left: barLeft + 'px' }">
+
+                        </div>
+                    </div>
+                    <a href="cx-whatsapp://">
+                        <div class="click3">
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="header" v-on:click="reset">
+
+            </div>
+        </div>
+        <script src="touch.js" type="module"></script>
+        <script src="scripts.js" type="module"></script>
+        
+    </body>
+
+</html>

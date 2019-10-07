@@ -1,0 +1,117 @@
+body{
+    padding:0px;
+    margin:0px;
+}
+*{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#app{
+    height:812px;
+    width:375px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    overflow:hidden;
+}
+.wrapper{
+    height:812px;
+    width:375px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    transition:left 0.3s;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.wrapper.waiting{
+    left:375px;
+}
+.wrapper.out{
+    left:-375px;
+}
+.header{
+    background-image:url(assets/top-nav.png);
+    width:375px;
+    height:100px;
+    background-size:375px 100px;
+    position:fixed;
+    top:-20px;
+    left:0px;
+}
+
+.page{
+    position:absolute;
+    top:80px;
+    width:375px;
+    background-repeat:no-repeat;
+}
+.page1{
+    background-image:url(assets/page1.png);
+    background-size:375px 3132px;
+    height:3132px;
+    left:0px;
+}
+.page2{
+    background-image:url(assets/page2.png);
+    background-size:375px 2979px;
+    height:2979px;
+    left:0px;
+}
+.page3{
+    background-image:url(assets/page3.png);
+    background-size:375px 3221px;
+    height:3221px;
+    left:0px;
+}
+
+.click1{
+    height:40px;
+    width:200px;
+    position:absolute;
+    left:98px;
+    top:1631px;
+}
+.click2{
+    height:40px;
+    width:230px;
+    position:absolute;
+    left:73px;
+    top:1685px;
+}
+.click3{
+    height: 86px;
+    width: 230px;
+    position: absolute;
+    left: 76px;
+    top: 2665px;
+}
+.blur-widget{
+    width:344px;
+    height:300px;
+    position:absolute;
+    left:16px;
+    top:1540px;
+    background-image:url(assets/noblur.jpg);
+    background-size:874px 300px;
+    background-position:left;
+    overflow:hidden;
+}
+.blur{
+    position: absolute;
+    background-image: url(assets/blur.jpg);
+    background-size: 874px 300px;
+    top: 0px;
+    left: 0px;
+    height: 300px;
+    width: 344px;
+}
+.handle{
+    position: absolute;
+    background-image: url(assets/bar.png);
+    background-size: 18px 300px;
+    top: 0px;
+    left: 0px;
+    height: 300px;
+    width: 18px;
+}
